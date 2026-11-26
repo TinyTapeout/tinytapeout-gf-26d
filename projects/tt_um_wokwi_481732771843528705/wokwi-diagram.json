@@ -1,0 +1,2941 @@
+{
+  "version": 1,
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-text",
+      "id": "legend",
+      "top": -369,
+      "left": -310,
+      "attrs": {
+        "text": "Violet CLK   /   Orange RESET   /   Gold STEP enable"
+      }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "controls_label",
+      "top": -145,
+      "left": -290,
+      "attrs": {
+        "text": "Simulation inputs"
+      }
+    },
+    {
+      "type": "wokwi-clock-generator",
+      "id": "sample_clock",
+      "top": -240,
+      "left": -275,
+      "attrs": {
+        "frequency": "1000"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "step",
+      "top": -80.2,
+      "left": -268.8,
+      "attrs": {
+        "color": "blue",
+        "label": "STEP",
+        "bounce": "0",
+        "key": "s"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "reset",
+      "top": 75,
+      "left": -266,
+      "attrs": {
+        "color": "red",
+        "label": "RESET",
+        "bounce": "0",
+        "key": "r"
+      }
+    },
+    {
+      "type": "wokwi-vcc",
+      "id": "vcc",
+      "top": -110,
+      "left": -310,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gnd",
+      "id": "gnd",
+      "top": 150,
+      "left": -320,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "step_pull",
+      "top": -4,
+      "left": -250,
+      "attrs": {
+        "value": "10000"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "reset_pull",
+      "top": 45,
+      "left": -250,
+      "attrs": {
+        "value": "10000"
+      }
+    },
+    {
+      "type": "board-tt-block-input",
+      "id": "ttin",
+      "top": -45.73,
+      "left": -129.6,
+      "attrs": {
+        "verilogRole": "input"
+      }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "counter_label",
+      "top": -349.6,
+      "left": 26.84,
+      "attrs": {
+        "text": "1. MOD-10 COUNTER"
+      }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "edge_label",
+      "top": -305.9,
+      "left": 51.24,
+      "attrs": {
+        "text": "Synchronizer and rising-edge detector"
+      }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "wrap_label",
+      "top": -150.65,
+      "left": 54.9,
+      "attrs": {
+        "text": "Clear on STEP at 9 or above"
+      }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "bcd_label",
+      "top": 67.85,
+      "left": 650.26,
+      "attrs": {
+        "text": "BCD state"
+      }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "carry_label",
+      "top": 67.85,
+      "left": 54.9,
+      "attrs": {
+        "text": "Carry / XOR / next state"
+      }
+    },
+    {
+      "type": "wokwi-gate-not",
+      "id": "reset_high",
+      "top": -28.8,
+      "left": 28.8,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-flip-flop-dr",
+      "id": "sample",
+      "top": -259.2,
+      "left": 48.0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-flip-flop-dr",
+      "id": "sync",
+      "top": -259.2,
+      "left": 249.6,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-flip-flop-dr",
+      "id": "previous",
+      "top": -259.2,
+      "left": 451.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "step_enable",
+      "top": -259.2,
+      "left": 643.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "toggle1",
+      "top": 249.6,
+      "left": 57.6,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "toggle2",
+      "top": 364.8,
+      "left": 57.6,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "toggle3",
+      "top": 489.6,
+      "left": 57.6,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-or-2",
+      "id": "low_nonzero",
+      "top": -105.6,
+      "left": 57.6,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-or-2",
+      "id": "lower_nonzero",
+      "top": -96.0,
+      "left": 220.8,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "wrap_at_nine",
+      "top": -86.4,
+      "left": 393.6,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "clear_on_step",
+      "top": -76.8,
+      "left": 556.8,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-not",
+      "id": "keep_count",
+      "top": -76.8,
+      "left": 729.6,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-xor-2",
+      "id": "sum0",
+      "top": 115.2,
+      "left": 249.6,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "next0",
+      "top": 124.8,
+      "left": 451.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-flip-flop-dr",
+      "id": "count0",
+      "top": 144.0,
+      "left": 652.8,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-xor-2",
+      "id": "sum1",
+      "top": 240.0,
+      "left": 249.6,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "next1",
+      "top": 249.6,
+      "left": 451.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-flip-flop-dr",
+      "id": "count1",
+      "top": 259.2,
+      "left": 652.8,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-xor-2",
+      "id": "sum2",
+      "top": 355.2,
+      "left": 249.6,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "next2",
+      "top": 364.8,
+      "left": 451.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-flip-flop-dr",
+      "id": "count2",
+      "top": 384.0,
+      "left": 652.8,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-xor-2",
+      "id": "sum3",
+      "top": 480.0,
+      "left": 249.6,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "next3",
+      "top": 489.6,
+      "left": 451.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-flip-flop-dr",
+      "id": "count3",
+      "top": 499.2,
+      "left": 652.8,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-text",
+      "id": "decoder_label",
+      "top": -349.6,
+      "left": 958.92,
+      "attrs": {
+        "text": "2. BCD TO SEVEN-SEGMENT DECODER"
+      }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "pairs_label",
+      "top": -230.0,
+      "left": 958.92,
+      "attrs": {
+        "text": "BCD bit pairs"
+      }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "digits_label",
+      "top": -230.0,
+      "left": 1174.86,
+      "attrs": {
+        "text": "Digit matches"
+      }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "segment_label",
+      "top": -230.0,
+      "left": 1555.5,
+      "attrs": {
+        "text": "Segment drivers  A-G"
+      }
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "hi00",
+      "top": -163.2,
+      "left": 960.0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "hi01",
+      "top": -76.8,
+      "left": 960.0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "lo00",
+      "top": 9.6,
+      "left": 960.0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "lo01",
+      "top": 105.6,
+      "left": 960.0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "lo10",
+      "top": 192.0,
+      "left": 960.0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "lo11",
+      "top": 278.4,
+      "left": 960.0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-text",
+      "id": "valid_label",
+      "top": 577.3,
+      "left": 958.92,
+      "attrs": {
+        "text": "Blank illegal BCD states"
+      }
+    },
+    {
+      "type": "wokwi-gate-or-2",
+      "id": "mid_nonzero",
+      "top": 614.4,
+      "left": 960.0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "invalid_bcd",
+      "top": 633.6,
+      "left": 1171.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-not",
+      "id": "valid_bcd",
+      "top": 633.6,
+      "left": 1363.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "digit1",
+      "top": -163.2,
+      "left": 1171.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "digit2",
+      "top": -76.8,
+      "left": 1171.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "digit4",
+      "top": 9.6,
+      "left": 1171.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "digit5",
+      "top": 105.6,
+      "left": 1171.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "digit6",
+      "top": 192.0,
+      "left": 1171.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "digit7",
+      "top": 278.4,
+      "left": 1171.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "digit0_or_1",
+      "top": 374.4,
+      "left": 1171.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "digit3_or_7",
+      "top": 460.8,
+      "left": 1171.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-or-2",
+      "id": "off_a",
+      "top": -163.2,
+      "left": 1411.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-or-2",
+      "id": "off_b",
+      "top": -76.8,
+      "left": 1411.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-or-2",
+      "id": "off_d",
+      "top": 105.6,
+      "left": 1411.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-or-2",
+      "id": "digit1_or_2",
+      "top": 460.8,
+      "left": 1411.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-or-2",
+      "id": "off_f",
+      "top": 278.4,
+      "left": 1411.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-or-2",
+      "id": "off_g",
+      "top": 374.4,
+      "left": 1411.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-or-2",
+      "id": "e_when_even",
+      "top": 182.4,
+      "left": 1411.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "on_e",
+      "top": 192.0,
+      "left": 1574.4,
+      "attrs": {}
+    },
+    {
+      "type": "board-tt-block-output",
+      "id": "ttout",
+      "top": 127.07,
+      "left": 2049.6,
+      "attrs": {
+        "verilogRole": "output"
+      }
+    },
+    {
+      "type": "wokwi-7segment",
+      "id": "display",
+      "top": 158.07,
+      "left": 2272.6,
+      "attrs": {
+        "common": "cathode"
+      }
+    },
+    {
+      "type": "wokwi-gnd",
+      "id": "display_ground",
+      "top": 299.07,
+      "left": 2286.12,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-not",
+      "id": "on_a",
+      "top": -163.2,
+      "left": 1574.4,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "segment_a",
+      "top": -153.6,
+      "left": 1766.4,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-text",
+      "id": "label_a",
+      "top": -184.0,
+      "left": 1804.38,
+      "attrs": {
+        "text": "A"
+      }
+    },
+    {
+      "type": "wokwi-gate-not",
+      "id": "on_b",
+      "top": -76.8,
+      "left": 1574.4,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "segment_b",
+      "top": -67.2,
+      "left": 1766.4,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-text",
+      "id": "label_b",
+      "top": -94.3,
+      "left": 1804.38,
+      "attrs": {
+        "text": "B"
+      }
+    },
+    {
+      "type": "wokwi-gate-not",
+      "id": "on_c",
+      "top": 9.6,
+      "left": 1574.4,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "segment_c",
+      "top": 19.2,
+      "left": 1766.4,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-text",
+      "id": "label_c",
+      "top": -4.6,
+      "left": 1804.38,
+      "attrs": {
+        "text": "C"
+      }
+    },
+    {
+      "type": "wokwi-gate-not",
+      "id": "on_d",
+      "top": 105.6,
+      "left": 1574.4,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "segment_d",
+      "top": 115.2,
+      "left": 1766.4,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-text",
+      "id": "label_d",
+      "top": 85.1,
+      "left": 1804.38,
+      "attrs": {
+        "text": "D"
+      }
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "segment_e",
+      "top": 201.6,
+      "left": 1766.4,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-text",
+      "id": "label_e",
+      "top": 174.8,
+      "left": 1804.38,
+      "attrs": {
+        "text": "E"
+      }
+    },
+    {
+      "type": "wokwi-gate-not",
+      "id": "on_f",
+      "top": 278.4,
+      "left": 1574.4,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "segment_f",
+      "top": 288.0,
+      "left": 1766.4,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-text",
+      "id": "label_f",
+      "top": 264.5,
+      "left": 1804.38,
+      "attrs": {
+        "text": "F"
+      }
+    },
+    {
+      "type": "wokwi-gate-not",
+      "id": "on_g",
+      "top": 374.4,
+      "left": 1574.4,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "segment_g",
+      "top": 384.0,
+      "left": 1766.4,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-text",
+      "id": "label_g",
+      "top": 354.2,
+      "left": 1804.38,
+      "attrs": {
+        "text": "G"
+      }
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "dp_off",
+      "top": 470.4,
+      "left": 1766.4,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-text",
+      "id": "label_dp",
+      "top": 443.9,
+      "left": 1804.38,
+      "attrs": {
+        "text": "DP"
+      }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "bit0",
+      "attrs": {
+        "text": "Q0"
+      },
+      "left": 681.8,
+      "top": 114.0
+    },
+    {
+      "type": "wokwi-text",
+      "id": "bit1",
+      "attrs": {
+        "text": "Q1"
+      },
+      "left": 681.8,
+      "top": 229.2
+    },
+    {
+      "type": "wokwi-text",
+      "id": "bit2",
+      "attrs": {
+        "text": "Q2"
+      },
+      "left": 681.8,
+      "top": 354.0
+    },
+    {
+      "type": "wokwi-text",
+      "id": "bit3",
+      "attrs": {
+        "text": "Q3"
+      },
+      "left": 681.8,
+      "top": 469.2
+    },
+    {
+      "type": "wokwi-text",
+      "id": "wire_branch_00",
+      "attrs": {
+        "text": "•"
+      },
+      "left": 755.6,
+      "top": 259.6
+    },
+    {
+      "type": "wokwi-text",
+      "id": "wire_branch_01",
+      "attrs": {
+        "text": "•"
+      },
+      "left": 938.0,
+      "top": 259.6
+    },
+    {
+      "type": "wokwi-text",
+      "id": "wire_branch_02",
+      "attrs": {
+        "text": "•"
+      },
+      "left": 938.0,
+      "top": 230.8
+    },
+    {
+      "type": "wokwi-text",
+      "id": "wire_branch_03",
+      "attrs": {
+        "text": "•"
+      },
+      "left": 237.2,
+      "top": 230.8
+    },
+    {
+      "type": "wokwi-text",
+      "id": "wire_branch_04",
+      "attrs": {
+        "text": "•"
+      },
+      "left": 141.2,
+      "top": 230.8
+    },
+    {
+      "type": "wokwi-text",
+      "id": "wire_branch_05",
+      "attrs": {
+        "text": "•"
+      },
+      "left": 1744.4,
+      "top": 403.6
+    },
+    {
+      "type": "wokwi-text",
+      "id": "wire_branch_06",
+      "attrs": {
+        "text": "•"
+      },
+      "left": 1744.4,
+      "top": 307.6
+    },
+    {
+      "type": "wokwi-text",
+      "id": "wire_branch_07",
+      "attrs": {
+        "text": "•"
+      },
+      "left": 1744.4,
+      "top": 221.20000000000002
+    },
+    {
+      "type": "wokwi-text",
+      "id": "wire_branch_08",
+      "attrs": {
+        "text": "•"
+      },
+      "left": 1744.4,
+      "top": 134.8
+    },
+    {
+      "type": "wokwi-text",
+      "id": "wire_branch_09",
+      "attrs": {
+        "text": "•"
+      },
+      "left": 1744.4,
+      "top": 38.8
+    },
+    {
+      "type": "wokwi-text",
+      "id": "wire_branch_10",
+      "attrs": {
+        "text": "•"
+      },
+      "left": 1744.4,
+      "top": -47.599999999999994
+    },
+    {
+      "type": "wokwi-text",
+      "id": "wire_branch_11",
+      "attrs": {
+        "text": "•"
+      },
+      "left": 131.6,
+      "top": -18.799999999999997
+    },
+    {
+      "type": "wokwi-text",
+      "id": "wire_branch_12",
+      "attrs": {
+        "text": "•"
+      },
+      "left": 35.6,
+      "top": -201.2
+    },
+    {
+      "type": "wokwi-text",
+      "id": "wire_branch_13",
+      "attrs": {
+        "text": "•"
+      },
+      "left": 294.8,
+      "top": -201.2
+    },
+    {
+      "type": "wokwi-text",
+      "id": "wire_branch_14",
+      "attrs": {
+        "text": "•"
+      },
+      "left": 630.8000000000001,
+      "top": 192.4
+    },
+    {
+      "type": "wokwi-text",
+      "id": "wire_branch_15",
+      "attrs": {
+        "text": "•"
+      },
+      "left": 630.8000000000001,
+      "top": 307.6
+    },
+    {
+      "type": "wokwi-text",
+      "id": "wire_branch_16",
+      "attrs": {
+        "text": "•"
+      },
+      "left": 630.8000000000001,
+      "top": 432.40000000000003
+    },
+    {
+      "type": "wokwi-text",
+      "id": "wire_branch_17",
+      "attrs": {
+        "text": "•"
+      },
+      "left": 26.0,
+      "top": -239.6
+    },
+    {
+      "type": "wokwi-text",
+      "id": "wire_branch_18",
+      "attrs": {
+        "text": "•"
+      },
+      "left": 227.6,
+      "top": -278.0
+    },
+    {
+      "type": "wokwi-text",
+      "id": "wire_branch_19",
+      "attrs": {
+        "text": "•"
+      },
+      "left": 371.59999999999997,
+      "top": -278.0
+    },
+    {
+      "type": "wokwi-text",
+      "id": "wire_branch_20",
+      "attrs": {
+        "text": "•"
+      },
+      "left": 621.2,
+      "top": 163.60000000000002
+    },
+    {
+      "type": "wokwi-text",
+      "id": "wire_branch_21",
+      "attrs": {
+        "text": "•"
+      },
+      "left": 621.2,
+      "top": 278.8
+    },
+    {
+      "type": "wokwi-text",
+      "id": "wire_branch_22",
+      "attrs": {
+        "text": "•"
+      },
+      "left": 621.2,
+      "top": 403.6
+    },
+    {
+      "type": "wokwi-text",
+      "id": "wire_branch_23",
+      "attrs": {
+        "text": "•"
+      },
+      "left": 755.6,
+      "top": 144.4
+    },
+    {
+      "type": "wokwi-text",
+      "id": "wire_branch_24",
+      "attrs": {
+        "text": "•"
+      },
+      "left": 928.4000000000001,
+      "top": 144.4
+    },
+    {
+      "type": "wokwi-text",
+      "id": "wire_branch_25",
+      "attrs": {
+        "text": "•"
+      },
+      "left": 928.4000000000001,
+      "top": 298.0
+    },
+    {
+      "type": "wokwi-text",
+      "id": "wire_branch_26",
+      "attrs": {
+        "text": "•"
+      },
+      "left": 237.2,
+      "top": 106.0
+    },
+    {
+      "type": "wokwi-text",
+      "id": "wire_branch_27",
+      "attrs": {
+        "text": "•"
+      },
+      "left": 170.0,
+      "top": 106.0
+    },
+    {
+      "type": "wokwi-text",
+      "id": "wire_branch_28",
+      "attrs": {
+        "text": "•"
+      },
+      "left": 755.6,
+      "top": 384.40000000000003
+    },
+    {
+      "type": "wokwi-text",
+      "id": "wire_branch_29",
+      "attrs": {
+        "text": "•"
+      },
+      "left": 918.8000000000001,
+      "top": 384.40000000000003
+    },
+    {
+      "type": "wokwi-text",
+      "id": "wire_branch_30",
+      "attrs": {
+        "text": "•"
+      },
+      "left": 237.2,
+      "top": 346.0
+    },
+    {
+      "type": "wokwi-text",
+      "id": "wire_branch_31",
+      "attrs": {
+        "text": "•"
+      },
+      "left": 208.39999999999998,
+      "top": 346.0
+    },
+    {
+      "type": "wokwi-text",
+      "id": "wire_branch_32",
+      "attrs": {
+        "text": "•"
+      },
+      "left": 1149.2,
+      "top": 10.0
+    },
+    {
+      "type": "wokwi-text",
+      "id": "wire_branch_33",
+      "attrs": {
+        "text": "•"
+      },
+      "left": 1149.2,
+      "top": 106.0
+    },
+    {
+      "type": "wokwi-text",
+      "id": "wire_branch_34",
+      "attrs": {
+        "text": "•"
+      },
+      "left": 1149.2,
+      "top": 192.4
+    },
+    {
+      "type": "wokwi-text",
+      "id": "wire_branch_35",
+      "attrs": {
+        "text": "•"
+      },
+      "left": 429.2,
+      "top": 144.4
+    },
+    {
+      "type": "wokwi-text",
+      "id": "wire_branch_36",
+      "attrs": {
+        "text": "•"
+      },
+      "left": 429.2,
+      "top": 269.2
+    },
+    {
+      "type": "wokwi-text",
+      "id": "wire_branch_37",
+      "attrs": {
+        "text": "•"
+      },
+      "left": 429.2,
+      "top": 384.40000000000003
+    },
+    {
+      "type": "wokwi-text",
+      "id": "wire_branch_38",
+      "attrs": {
+        "text": "•"
+      },
+      "left": 909.2,
+      "top": 211.60000000000002
+    },
+    {
+      "type": "wokwi-text",
+      "id": "wire_branch_39",
+      "attrs": {
+        "text": "•"
+      },
+      "left": 938.0,
+      "top": 29.2
+    },
+    {
+      "type": "wokwi-text",
+      "id": "wire_branch_40",
+      "attrs": {
+        "text": "•"
+      },
+      "left": 1552.4,
+      "top": 221.20000000000002
+    },
+    {
+      "type": "wokwi-text",
+      "id": "wire_branch_41",
+      "attrs": {
+        "text": "•"
+      },
+      "left": 899.6,
+      "top": 250.0
+    },
+    {
+      "type": "wokwi-text",
+      "id": "wire_branch_42",
+      "attrs": {
+        "text": "•"
+      },
+      "left": 928.4000000000001,
+      "top": 106.0
+    },
+    {
+      "type": "wokwi-text",
+      "id": "wire_branch_43",
+      "attrs": {
+        "text": "•"
+      },
+      "left": 1149.2,
+      "top": -153.2
+    },
+    {
+      "type": "wokwi-text",
+      "id": "wire_branch_44",
+      "attrs": {
+        "text": "•"
+      },
+      "left": 1149.2,
+      "top": -76.4
+    },
+    {
+      "type": "wokwi-text",
+      "id": "wire_branch_45",
+      "attrs": {
+        "text": "•"
+      },
+      "left": 890.0,
+      "top": 518.8
+    },
+    {
+      "type": "wokwi-text",
+      "id": "wire_branch_46",
+      "attrs": {
+        "text": "•"
+      },
+      "left": 938.0,
+      "top": -76.4
+    },
+    {
+      "type": "wokwi-text",
+      "id": "wire_branch_47",
+      "attrs": {
+        "text": "•"
+      },
+      "left": 755.6,
+      "top": 499.6
+    },
+    {
+      "type": "wokwi-text",
+      "id": "wire_branch_48",
+      "attrs": {
+        "text": "•"
+      },
+      "left": 237.2,
+      "top": 461.2
+    },
+    {
+      "type": "wokwi-text",
+      "id": "wire_branch_49",
+      "attrs": {
+        "text": "•"
+      },
+      "left": 534.8000000000001,
+      "top": -57.2
+    },
+    {
+      "type": "wokwi-text",
+      "id": "wire_branch_50",
+      "attrs": {
+        "text": "•"
+      },
+      "left": 237.2,
+      "top": 154.0
+    },
+    {
+      "type": "wokwi-text",
+      "id": "wire_branch_51",
+      "attrs": {
+        "text": "•"
+      },
+      "left": 179.6,
+      "top": 259.6
+    },
+    {
+      "type": "wokwi-text",
+      "id": "wire_branch_52",
+      "attrs": {
+        "text": "•"
+      },
+      "left": 160.39999999999998,
+      "top": 374.8
+    },
+    {
+      "type": "wokwi-text",
+      "id": "wire_branch_53",
+      "attrs": {
+        "text": "•"
+      },
+      "left": 419.59999999999997,
+      "top": -258.8
+    },
+    {
+      "type": "wokwi-text",
+      "id": "wire_branch_54",
+      "attrs": {
+        "text": "•"
+      },
+      "left": 1379.6000000000001,
+      "top": 288.40000000000003
+    },
+    {
+      "type": "wokwi-text",
+      "id": "wire_branch_55",
+      "attrs": {
+        "text": "•"
+      },
+      "left": 1120.4,
+      "top": 288.40000000000003
+    },
+    {
+      "type": "wokwi-text",
+      "id": "wire_branch_56",
+      "attrs": {
+        "text": "•"
+      },
+      "left": 1120.4,
+      "top": 115.6
+    },
+    {
+      "type": "wokwi-text",
+      "id": "wire_branch_57",
+      "attrs": {
+        "text": "•"
+      },
+      "left": 1139.6000000000001,
+      "top": 202.0
+    },
+    {
+      "type": "wokwi-text",
+      "id": "wire_branch_58",
+      "attrs": {
+        "text": "•"
+      },
+      "left": 1523.6000000000001,
+      "top": -153.2
+    },
+    {
+      "type": "wokwi-text",
+      "id": "wire_branch_59",
+      "attrs": {
+        "text": "•"
+      },
+      "left": 1370.0,
+      "top": 10.0
+    },
+    {
+      "type": "wokwi-text",
+      "id": "wire_branch_60",
+      "attrs": {
+        "text": "•"
+      },
+      "left": 1360.4,
+      "top": -153.2
+    },
+    {
+      "type": "wokwi-text",
+      "id": "wire_branch_61",
+      "attrs": {
+        "text": "•"
+      },
+      "left": 928.4000000000001,
+      "top": -143.6
+    }
+  ],
+  "connections": [
+    [
+      "sample_clock:CLK",
+      "ttin:EXTCLK",
+      "purple",
+      [
+        "h76"
+      ]
+    ],
+    [
+      "vcc:VCC",
+      "step:2.l",
+      "red",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "step:1.r",
+      "ttin:EXTIN0",
+      "blue",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "step:1.r",
+      "step_pull:1",
+      "blue",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "step_pull:2",
+      "gnd:GND",
+      "black",
+      [
+        "h20",
+        "v154"
+      ]
+    ],
+    [
+      "gnd:GND",
+      "reset:2.l",
+      "black",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "reset:1.r",
+      "ttin:EXTRST_N",
+      "orange",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "reset:1.r",
+      "reset_pull:1",
+      "orange",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "reset_pull:2",
+      "vcc:VCC",
+      "red",
+      [
+        "h45",
+        "v-170"
+      ]
+    ],
+    [
+      "ttin:RST_N",
+      "reset_high:IN",
+      "orange",
+      [
+        "h57.6"
+      ]
+    ],
+    [
+      "ttin:IN0",
+      "sample:D",
+      "deepskyblue",
+      [
+        "h38.4",
+        "v-249.6",
+        "h38.4"
+      ]
+    ],
+    [
+      "ttin:CLK",
+      "sample:CLK",
+      "violet",
+      [
+        "h9.6",
+        "v-211.2",
+        "h67.2"
+      ]
+    ],
+    [
+      "reset_high:OUT",
+      "sample:R",
+      "orange",
+      [
+        "h9.6",
+        "v-38.4",
+        "h-96",
+        "v-153.6",
+        "h57.6",
+        "v-9.6"
+      ]
+    ],
+    [
+      "sample:Q",
+      "sync:D",
+      "green",
+      [
+        "h105.6"
+      ]
+    ],
+    [
+      "ttin:CLK",
+      "sync:CLK",
+      "violet",
+      [
+        "h9.6",
+        "v-211.2",
+        "h48",
+        "v-38.4",
+        "h201.6",
+        "v38.4",
+        "h19.2"
+      ]
+    ],
+    [
+      "reset_high:OUT",
+      "sync:R",
+      "orange",
+      [
+        "h9.6",
+        "v-38.4",
+        "h-96",
+        "v-144",
+        "h259.2",
+        "v-19.2"
+      ]
+    ],
+    [
+      "sync:Q",
+      "previous:D",
+      "green",
+      [
+        "h105.6"
+      ]
+    ],
+    [
+      "ttin:CLK",
+      "previous:CLK",
+      "violet",
+      [
+        "h9.6",
+        "v-211.2",
+        "h48",
+        "v-38.4",
+        "h403.2",
+        "v38.4",
+        "h19.2"
+      ]
+    ],
+    [
+      "reset_high:OUT",
+      "previous:R",
+      "orange",
+      [
+        "h9.6",
+        "v-38.4",
+        "h-96",
+        "v-144",
+        "h460.8",
+        "v-19.2"
+      ]
+    ],
+    [
+      "sync:Q",
+      "step_enable:A",
+      "green",
+      [
+        "h76.8",
+        "v-28.8",
+        "h211.2",
+        "v28.8",
+        "h9.6"
+      ]
+    ],
+    [
+      "previous:NOTQ",
+      "step_enable:B",
+      "green",
+      [
+        "h96"
+      ]
+    ],
+    [
+      "step_enable:OUT",
+      "toggle1:A",
+      "gold",
+      [
+        "h9.6",
+        "v153.6",
+        "h-211.2",
+        "v182.4",
+        "h-172.8",
+        "v67.2",
+        "h-316.8",
+        "v96",
+        "h9.6"
+      ]
+    ],
+    [
+      "count0:Q",
+      "toggle1:B",
+      "cyan",
+      [
+        "h9.6",
+        "v-48",
+        "h-518.4",
+        "v9.6",
+        "h-67.2",
+        "v182.4",
+        "h-124.8",
+        "v-19.2",
+        "h9.6"
+      ]
+    ],
+    [
+      "toggle1:OUT",
+      "toggle2:A",
+      "green",
+      [
+        "h28.8",
+        "v76.8",
+        "h-134.4",
+        "v28.8",
+        "h9.6"
+      ]
+    ],
+    [
+      "count1:Q",
+      "toggle2:B",
+      "dodgerblue",
+      [
+        "h9.6",
+        "v-38.4",
+        "h-518.4",
+        "v9.6",
+        "h-201.6",
+        "v153.6",
+        "h19.2"
+      ]
+    ],
+    [
+      "toggle2:OUT",
+      "toggle3:A",
+      "green",
+      [
+        "h9.6",
+        "v86.4",
+        "h-115.2",
+        "v28.8",
+        "h9.6"
+      ]
+    ],
+    [
+      "count2:Q",
+      "toggle3:B",
+      "magenta",
+      [
+        "h9.6",
+        "v-48",
+        "h-518.4",
+        "v9.6",
+        "h-67.2",
+        "v124.8",
+        "h-134.4",
+        "v38.4",
+        "h19.2"
+      ]
+    ],
+    [
+      "count0:Q",
+      "low_nonzero:A",
+      "cyan",
+      [
+        "h9.6",
+        "v-48",
+        "h-518.4",
+        "v9.6",
+        "h-67.2",
+        "v-230.4",
+        "h-124.8",
+        "v19.2",
+        "h9.6"
+      ]
+    ],
+    [
+      "count1:Q",
+      "low_nonzero:B",
+      "dodgerblue",
+      [
+        "h9.6",
+        "v-38.4",
+        "h-518.4",
+        "v9.6",
+        "h-96",
+        "v-297.6",
+        "h-96",
+        "v-19.2",
+        "h9.6"
+      ]
+    ],
+    [
+      "low_nonzero:OUT",
+      "lower_nonzero:A",
+      "mediumseagreen",
+      [
+        "h67.2"
+      ]
+    ],
+    [
+      "count2:Q",
+      "lower_nonzero:B",
+      "magenta",
+      [
+        "h9.6",
+        "v-48",
+        "h-518.4",
+        "v9.6",
+        "h-28.8",
+        "v-422.4",
+        "h9.6"
+      ]
+    ],
+    [
+      "lower_nonzero:OUT",
+      "wrap_at_nine:A",
+      "mediumseagreen",
+      [
+        "h76.8"
+      ]
+    ],
+    [
+      "count3:Q",
+      "wrap_at_nine:B",
+      "limegreen",
+      [
+        "h9.6",
+        "v-38.4",
+        "h-528",
+        "v-518.4",
+        "h153.6",
+        "v-9.6",
+        "h9.6"
+      ]
+    ],
+    [
+      "wrap_at_nine:OUT",
+      "clear_on_step:A",
+      "green",
+      [
+        "h67.2"
+      ]
+    ],
+    [
+      "step_enable:OUT",
+      "clear_on_step:B",
+      "gold",
+      [
+        "h9.6",
+        "v153.6",
+        "h-211.2",
+        "v38.4",
+        "h19.2"
+      ]
+    ],
+    [
+      "clear_on_step:OUT",
+      "keep_count:IN",
+      "green",
+      [
+        "h76.8"
+      ]
+    ],
+    [
+      "count0:Q",
+      "sum0:A",
+      "cyan",
+      [
+        "h9.6",
+        "v-48",
+        "h-518.4",
+        "v19.2",
+        "h9.6"
+      ]
+    ],
+    [
+      "step_enable:OUT",
+      "sum0:B",
+      "gold",
+      [
+        "h9.6",
+        "v153.6",
+        "h-211.2",
+        "v182.4",
+        "h-172.8",
+        "v67.2",
+        "h-124.8",
+        "v-19.2",
+        "h9.6"
+      ]
+    ],
+    [
+      "sum0:OUT",
+      "next0:A",
+      "green",
+      [
+        "h105.6"
+      ]
+    ],
+    [
+      "keep_count:OUT",
+      "next0:B",
+      "sandybrown",
+      [
+        "h9.6",
+        "v172.8",
+        "h-403.2",
+        "v38.4",
+        "h19.2"
+      ]
+    ],
+    [
+      "next0:OUT",
+      "count0:D",
+      "green",
+      [
+        "h96",
+        "v9.6",
+        "h9.6"
+      ]
+    ],
+    [
+      "ttin:CLK",
+      "count0:CLK",
+      "violet",
+      [
+        "h9.6",
+        "v-211.2",
+        "h48",
+        "v-38.4",
+        "h345.6",
+        "v441.6",
+        "h278.4"
+      ]
+    ],
+    [
+      "reset_high:OUT",
+      "count0:R",
+      "orange",
+      [
+        "h9.6",
+        "v211.2",
+        "h566.4",
+        "v-9.6"
+      ]
+    ],
+    [
+      "count1:Q",
+      "sum1:A",
+      "dodgerblue",
+      [
+        "h9.6",
+        "v-38.4",
+        "h-518.4",
+        "v19.2",
+        "h9.6"
+      ]
+    ],
+    [
+      "toggle1:OUT",
+      "sum1:B",
+      "green",
+      [
+        "h96"
+      ]
+    ],
+    [
+      "sum1:OUT",
+      "next1:A",
+      "green",
+      [
+        "h105.6"
+      ]
+    ],
+    [
+      "keep_count:OUT",
+      "next1:B",
+      "sandybrown",
+      [
+        "h9.6",
+        "v172.8",
+        "h-403.2",
+        "v163.2",
+        "h19.2"
+      ]
+    ],
+    [
+      "next1:OUT",
+      "count1:D",
+      "green",
+      [
+        "h105.6"
+      ]
+    ],
+    [
+      "ttin:CLK",
+      "count1:CLK",
+      "violet",
+      [
+        "h9.6",
+        "v-211.2",
+        "h48",
+        "v-38.4",
+        "h345.6",
+        "v441.6",
+        "h249.6",
+        "v115.2",
+        "h28.8"
+      ]
+    ],
+    [
+      "reset_high:OUT",
+      "count1:R",
+      "orange",
+      [
+        "h9.6",
+        "v211.2",
+        "h499.2",
+        "v115.2",
+        "h67.2",
+        "v-9.6"
+      ]
+    ],
+    [
+      "count2:Q",
+      "sum2:A",
+      "magenta",
+      [
+        "h9.6",
+        "v-48",
+        "h-518.4",
+        "v19.2",
+        "h9.6"
+      ]
+    ],
+    [
+      "toggle2:OUT",
+      "sum2:B",
+      "green",
+      [
+        "h96"
+      ]
+    ],
+    [
+      "sum2:OUT",
+      "next2:A",
+      "green",
+      [
+        "h105.6"
+      ]
+    ],
+    [
+      "keep_count:OUT",
+      "next2:B",
+      "sandybrown",
+      [
+        "h9.6",
+        "v172.8",
+        "h-403.2",
+        "v278.4",
+        "h19.2"
+      ]
+    ],
+    [
+      "next2:OUT",
+      "count2:D",
+      "green",
+      [
+        "h96",
+        "v9.6",
+        "h9.6"
+      ]
+    ],
+    [
+      "ttin:CLK",
+      "count2:CLK",
+      "violet",
+      [
+        "h9.6",
+        "v-211.2",
+        "h48",
+        "v-38.4",
+        "h345.6",
+        "v441.6",
+        "h249.6",
+        "v240",
+        "h28.8"
+      ]
+    ],
+    [
+      "reset_high:OUT",
+      "count2:R",
+      "orange",
+      [
+        "h9.6",
+        "v211.2",
+        "h499.2",
+        "v240",
+        "h67.2",
+        "v-9.6"
+      ]
+    ],
+    [
+      "count3:Q",
+      "sum3:A",
+      "limegreen",
+      [
+        "h9.6",
+        "v-38.4",
+        "h-518.4",
+        "v19.2",
+        "h9.6"
+      ]
+    ],
+    [
+      "toggle3:OUT",
+      "sum3:B",
+      "green",
+      [
+        "h96"
+      ]
+    ],
+    [
+      "sum3:OUT",
+      "next3:A",
+      "green",
+      [
+        "h105.6"
+      ]
+    ],
+    [
+      "keep_count:OUT",
+      "next3:B",
+      "sandybrown",
+      [
+        "h9.6",
+        "v172.8",
+        "h-403.2",
+        "v403.2",
+        "h19.2"
+      ]
+    ],
+    [
+      "next3:OUT",
+      "count3:D",
+      "green",
+      [
+        "h105.6"
+      ]
+    ],
+    [
+      "ttin:CLK",
+      "count3:CLK",
+      "violet",
+      [
+        "h9.6",
+        "v-211.2",
+        "h48",
+        "v-38.4",
+        "h345.6",
+        "v441.6",
+        "h249.6",
+        "v355.2",
+        "h28.8"
+      ]
+    ],
+    [
+      "reset_high:OUT",
+      "count3:R",
+      "orange",
+      [
+        "h9.6",
+        "v211.2",
+        "h499.2",
+        "v355.2",
+        "h67.2",
+        "v-9.6"
+      ]
+    ],
+    [
+      "count3:NOTQ",
+      "hi00:A",
+      "seagreen",
+      [
+        "h144",
+        "v-595.2",
+        "h48",
+        "v-86.4",
+        "h19.2"
+      ]
+    ],
+    [
+      "count2:NOTQ",
+      "hi00:B",
+      "orchid",
+      [
+        "h134.4",
+        "v-547.2",
+        "h76.8"
+      ]
+    ],
+    [
+      "count3:NOTQ",
+      "hi01:A",
+      "seagreen",
+      [
+        "h144",
+        "v-595.2",
+        "h67.2"
+      ]
+    ],
+    [
+      "count2:Q",
+      "hi01:B",
+      "magenta",
+      [
+        "h172.8",
+        "v-441.6",
+        "h38.4"
+      ]
+    ],
+    [
+      "count1:NOTQ",
+      "lo00:A",
+      "steelblue",
+      [
+        "h153.6",
+        "v-172.8",
+        "h28.8",
+        "v-96",
+        "h28.8"
+      ]
+    ],
+    [
+      "count0:NOTQ",
+      "lo00:B",
+      "teal",
+      [
+        "h9.6",
+        "v48",
+        "h153.6",
+        "v-182.4",
+        "h48"
+      ]
+    ],
+    [
+      "count1:NOTQ",
+      "lo01:A",
+      "steelblue",
+      [
+        "h153.6",
+        "v-172.8",
+        "h57.6"
+      ]
+    ],
+    [
+      "count0:Q",
+      "lo01:B",
+      "cyan",
+      [
+        "h201.6",
+        "v-19.2",
+        "h9.6"
+      ]
+    ],
+    [
+      "count1:Q",
+      "lo10:A",
+      "dodgerblue",
+      [
+        "h192",
+        "v-67.2",
+        "h19.2"
+      ]
+    ],
+    [
+      "count0:NOTQ",
+      "lo10:B",
+      "teal",
+      [
+        "h9.6",
+        "v48",
+        "h201.6"
+      ]
+    ],
+    [
+      "count1:Q",
+      "lo11:A",
+      "dodgerblue",
+      [
+        "h201.6",
+        "v19.2",
+        "h9.6"
+      ]
+    ],
+    [
+      "count0:Q",
+      "lo11:B",
+      "cyan",
+      [
+        "h182.4",
+        "v153.6",
+        "h28.8"
+      ]
+    ],
+    [
+      "count2:Q",
+      "mid_nonzero:A",
+      "magenta",
+      [
+        "h172.8",
+        "v230.4",
+        "h38.4"
+      ]
+    ],
+    [
+      "count1:Q",
+      "mid_nonzero:B",
+      "dodgerblue",
+      [
+        "h192",
+        "v374.4",
+        "h19.2"
+      ]
+    ],
+    [
+      "mid_nonzero:OUT",
+      "invalid_bcd:A",
+      "green",
+      [
+        "h105.6",
+        "v9.6",
+        "h9.6"
+      ]
+    ],
+    [
+      "count3:Q",
+      "invalid_bcd:B",
+      "limegreen",
+      [
+        "h134.4",
+        "v153.6",
+        "h288"
+      ]
+    ],
+    [
+      "invalid_bcd:OUT",
+      "valid_bcd:IN",
+      "green",
+      [
+        "h96"
+      ]
+    ],
+    [
+      "hi00:OUT",
+      "digit1:A",
+      "cadetblue",
+      [
+        "h105.6",
+        "v-9.6",
+        "h9.6"
+      ]
+    ],
+    [
+      "lo01:OUT",
+      "digit1:B",
+      "mediumseagreen",
+      [
+        "h67.2",
+        "v-259.2",
+        "h48"
+      ]
+    ],
+    [
+      "hi00:OUT",
+      "digit2:A",
+      "cadetblue",
+      [
+        "h96",
+        "v76.8",
+        "h19.2"
+      ]
+    ],
+    [
+      "lo10:OUT",
+      "digit2:B",
+      "mediumseagreen",
+      [
+        "h86.4",
+        "v-259.2",
+        "h28.8"
+      ]
+    ],
+    [
+      "hi01:OUT",
+      "digit4:A",
+      "cadetblue",
+      [
+        "h9.6",
+        "v76.8",
+        "h105.6"
+      ]
+    ],
+    [
+      "lo00:OUT",
+      "digit4:B",
+      "mediumseagreen",
+      [
+        "h105.6",
+        "v9.6",
+        "h9.6"
+      ]
+    ],
+    [
+      "hi01:OUT",
+      "digit5:A",
+      "cadetblue",
+      [
+        "h9.6",
+        "v76.8",
+        "h86.4",
+        "v96",
+        "h19.2"
+      ]
+    ],
+    [
+      "lo01:OUT",
+      "digit5:B",
+      "mediumseagreen",
+      [
+        "h105.6",
+        "v9.6",
+        "h9.6"
+      ]
+    ],
+    [
+      "hi01:OUT",
+      "digit6:A",
+      "cadetblue",
+      [
+        "h9.6",
+        "v76.8",
+        "h86.4",
+        "v182.4",
+        "h19.2"
+      ]
+    ],
+    [
+      "lo10:OUT",
+      "digit6:B",
+      "mediumseagreen",
+      [
+        "h105.6",
+        "v9.6",
+        "h9.6"
+      ]
+    ],
+    [
+      "hi01:OUT",
+      "digit7:A",
+      "cadetblue",
+      [
+        "h9.6",
+        "v76.8",
+        "h86.4",
+        "v268.8",
+        "h19.2"
+      ]
+    ],
+    [
+      "lo11:OUT",
+      "digit7:B",
+      "mediumseagreen",
+      [
+        "h105.6",
+        "v9.6",
+        "h9.6"
+      ]
+    ],
+    [
+      "hi00:OUT",
+      "digit0_or_1:A",
+      "cadetblue",
+      [
+        "h96",
+        "v76.8",
+        "h-19.2",
+        "v451.2",
+        "h38.4"
+      ]
+    ],
+    [
+      "count1:NOTQ",
+      "digit0_or_1:B",
+      "steelblue",
+      [
+        "h153.6",
+        "v-28.8",
+        "h240",
+        "v144",
+        "h28.8"
+      ]
+    ],
+    [
+      "count3:NOTQ",
+      "digit3_or_7:A",
+      "seagreen",
+      [
+        "h403.2",
+        "v-57.6",
+        "h19.2"
+      ]
+    ],
+    [
+      "lo11:OUT",
+      "digit3_or_7:B",
+      "mediumseagreen",
+      [
+        "h67.2",
+        "v192",
+        "h48"
+      ]
+    ],
+    [
+      "digit1:OUT",
+      "off_a:A",
+      "deepskyblue",
+      [
+        "h134.4",
+        "v-9.6",
+        "h9.6"
+      ]
+    ],
+    [
+      "digit4:OUT",
+      "off_a:B",
+      "deepskyblue",
+      [
+        "h76.8",
+        "v-163.2",
+        "h67.2"
+      ]
+    ],
+    [
+      "digit5:OUT",
+      "off_b:A",
+      "deepskyblue",
+      [
+        "h115.2",
+        "v-192",
+        "h28.8"
+      ]
+    ],
+    [
+      "digit6:OUT",
+      "off_b:B",
+      "deepskyblue",
+      [
+        "h76.8",
+        "v-172.8",
+        "h57.6",
+        "v-86.4",
+        "h9.6"
+      ]
+    ],
+    [
+      "off_a:OUT",
+      "off_d:A",
+      "darkseagreen",
+      [
+        "h19.2",
+        "v240",
+        "h-124.8",
+        "v19.2",
+        "h9.6"
+      ]
+    ],
+    [
+      "digit7:OUT",
+      "off_d:B",
+      "deepskyblue",
+      [
+        "h115.2",
+        "v-163.2",
+        "h28.8"
+      ]
+    ],
+    [
+      "digit1:OUT",
+      "digit1_or_2:A",
+      "deepskyblue",
+      [
+        "h96",
+        "v614.4",
+        "h48"
+      ]
+    ],
+    [
+      "digit2:OUT",
+      "digit1_or_2:B",
+      "deepskyblue",
+      [
+        "h9.6",
+        "v76.8",
+        "h96",
+        "v470.4",
+        "h38.4"
+      ]
+    ],
+    [
+      "digit1_or_2:OUT",
+      "off_f:A",
+      "deepskyblue",
+      [
+        "h19.2",
+        "v-211.2",
+        "h-124.8",
+        "v19.2",
+        "h9.6"
+      ]
+    ],
+    [
+      "digit3_or_7:OUT",
+      "off_f:B",
+      "deepskyblue",
+      [
+        "h115.2",
+        "v-172.8",
+        "h28.8"
+      ]
+    ],
+    [
+      "digit0_or_1:OUT",
+      "off_g:A",
+      "deepskyblue",
+      [
+        "h134.4",
+        "v-9.6",
+        "h9.6"
+      ]
+    ],
+    [
+      "digit7:OUT",
+      "off_g:B",
+      "deepskyblue",
+      [
+        "h124.8",
+        "v105.6",
+        "h19.2"
+      ]
+    ],
+    [
+      "count2:NOTQ",
+      "e_when_even:A",
+      "orchid",
+      [
+        "h134.4",
+        "v-547.2",
+        "h48",
+        "v-38.4",
+        "h422.4",
+        "v364.8",
+        "h57.6"
+      ]
+    ],
+    [
+      "count1:Q",
+      "e_when_even:B",
+      "dodgerblue",
+      [
+        "h192",
+        "v-28.8",
+        "h460.8",
+        "v-28.8",
+        "h9.6"
+      ]
+    ],
+    [
+      "e_when_even:OUT",
+      "on_e:A",
+      "green",
+      [
+        "h67.2"
+      ]
+    ],
+    [
+      "count0:NOTQ",
+      "on_e:B",
+      "teal",
+      [
+        "h9.6",
+        "v48",
+        "h153.6",
+        "v-182.4",
+        "h28.8",
+        "v57.6",
+        "h451.2",
+        "v134.4",
+        "h172.8",
+        "v-9.6",
+        "h9.6"
+      ]
+    ],
+    [
+      "display_ground:GND",
+      "display:COM.1",
+      "black",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "off_a:OUT",
+      "on_a:IN",
+      "darkseagreen",
+      [
+        "h67.2"
+      ]
+    ],
+    [
+      "on_a:OUT",
+      "segment_a:A",
+      "green",
+      [
+        "h96"
+      ]
+    ],
+    [
+      "valid_bcd:OUT",
+      "segment_a:B",
+      "skyblue",
+      [
+        "h288",
+        "v-777.6",
+        "h19.2"
+      ]
+    ],
+    [
+      "segment_a:OUT",
+      "ttout:OUT0",
+      "limegreen",
+      [
+        "h182.4",
+        "v288",
+        "h9.6"
+      ]
+    ],
+    [
+      "ttout:EXTOUT0",
+      "display:A",
+      "limegreen",
+      [
+        "h19",
+        "v-78",
+        "h139"
+      ]
+    ],
+    [
+      "off_b:OUT",
+      "on_b:IN",
+      "darkseagreen",
+      [
+        "h67.2"
+      ]
+    ],
+    [
+      "on_b:OUT",
+      "segment_b:A",
+      "green",
+      [
+        "h96"
+      ]
+    ],
+    [
+      "valid_bcd:OUT",
+      "segment_b:B",
+      "skyblue",
+      [
+        "h288",
+        "v-691.2",
+        "h19.2"
+      ]
+    ],
+    [
+      "segment_b:OUT",
+      "ttout:OUT1",
+      "green",
+      [
+        "h163.2",
+        "v211.2",
+        "h28.8"
+      ]
+    ],
+    [
+      "ttout:EXTOUT1",
+      "display:B",
+      "green",
+      [
+        "h31",
+        "v-74",
+        "h130"
+      ]
+    ],
+    [
+      "digit2:OUT",
+      "on_c:IN",
+      "deepskyblue",
+      [
+        "h9.6",
+        "v76.8",
+        "h288",
+        "v9.6",
+        "h9.6"
+      ]
+    ],
+    [
+      "on_c:OUT",
+      "segment_c:A",
+      "green",
+      [
+        "h96"
+      ]
+    ],
+    [
+      "valid_bcd:OUT",
+      "segment_c:B",
+      "skyblue",
+      [
+        "h288",
+        "v-604.8",
+        "h19.2"
+      ]
+    ],
+    [
+      "segment_c:OUT",
+      "ttout:OUT2",
+      "cyan",
+      [
+        "h172.8",
+        "v134.4",
+        "h19.2"
+      ]
+    ],
+    [
+      "ttout:EXTOUT2",
+      "display:C",
+      "cyan",
+      [
+        "h44",
+        "v98",
+        "h114"
+      ]
+    ],
+    [
+      "off_d:OUT",
+      "on_d:IN",
+      "darkseagreen",
+      [
+        "h67.2"
+      ]
+    ],
+    [
+      "on_d:OUT",
+      "segment_d:A",
+      "green",
+      [
+        "h96"
+      ]
+    ],
+    [
+      "valid_bcd:OUT",
+      "segment_d:B",
+      "skyblue",
+      [
+        "h288",
+        "v-508.8",
+        "h19.2"
+      ]
+    ],
+    [
+      "segment_d:OUT",
+      "ttout:OUT3",
+      "blue",
+      [
+        "h9.6",
+        "v48",
+        "h182.4"
+      ]
+    ],
+    [
+      "ttout:EXTOUT3",
+      "display:D",
+      "blue",
+      [
+        "h57",
+        "v70",
+        "h82"
+      ]
+    ],
+    [
+      "on_e:OUT",
+      "segment_e:A",
+      "green",
+      [
+        "h96"
+      ]
+    ],
+    [
+      "valid_bcd:OUT",
+      "segment_e:B",
+      "skyblue",
+      [
+        "h288",
+        "v-422.4",
+        "h19.2"
+      ]
+    ],
+    [
+      "segment_e:OUT",
+      "ttout:OUT4",
+      "violet",
+      [
+        "h9.6",
+        "v-28.8",
+        "h182.4"
+      ]
+    ],
+    [
+      "ttout:EXTOUT4",
+      "display:E",
+      "violet",
+      [
+        "h70",
+        "v42",
+        "h59"
+      ]
+    ],
+    [
+      "off_f:OUT",
+      "on_f:IN",
+      "darkseagreen",
+      [
+        "h67.2"
+      ]
+    ],
+    [
+      "on_f:OUT",
+      "segment_f:A",
+      "green",
+      [
+        "h96"
+      ]
+    ],
+    [
+      "valid_bcd:OUT",
+      "segment_f:B",
+      "skyblue",
+      [
+        "h288",
+        "v-336",
+        "h19.2"
+      ]
+    ],
+    [
+      "segment_f:OUT",
+      "ttout:OUT5",
+      "green",
+      [
+        "h172.8",
+        "v-105.6",
+        "h19.2"
+      ]
+    ],
+    [
+      "ttout:EXTOUT5",
+      "display:F",
+      "green",
+      [
+        "h83",
+        "v-96",
+        "h56"
+      ]
+    ],
+    [
+      "off_g:OUT",
+      "on_g:IN",
+      "darkseagreen",
+      [
+        "h67.2"
+      ]
+    ],
+    [
+      "on_g:OUT",
+      "segment_g:A",
+      "green",
+      [
+        "h96"
+      ]
+    ],
+    [
+      "valid_bcd:OUT",
+      "segment_g:B",
+      "skyblue",
+      [
+        "h288",
+        "v-240",
+        "h19.2"
+      ]
+    ],
+    [
+      "segment_g:OUT",
+      "ttout:OUT6",
+      "limegreen",
+      [
+        "h163.2",
+        "v-192",
+        "h28.8"
+      ]
+    ],
+    [
+      "ttout:EXTOUT6",
+      "display:G",
+      "limegreen",
+      [
+        "h96",
+        "v-93",
+        "h33"
+      ]
+    ],
+    [
+      "count0:Q",
+      "dp_off:A",
+      "cyan",
+      [
+        "h182.4",
+        "v297.6",
+        "h825.6",
+        "v28.8",
+        "h9.6"
+      ]
+    ],
+    [
+      "count0:NOTQ",
+      "dp_off:B",
+      "teal",
+      [
+        "h9.6",
+        "v48",
+        "h153.6",
+        "v-182.4",
+        "h28.8",
+        "v57.6",
+        "h451.2",
+        "v134.4",
+        "h163.2",
+        "v268.8",
+        "h211.2"
+      ]
+    ],
+    [
+      "dp_off:OUT",
+      "ttout:OUT7",
+      "gray",
+      [
+        "h182.4",
+        "v-268.8",
+        "h9.6"
+      ]
+    ],
+    [
+      "ttout:EXTOUT7",
+      "display:DP",
+      "gray",
+      [
+        "h107",
+        "v24",
+        "h62"
+      ]
+    ]
+  ],
+  "dependencies": {}
+}
