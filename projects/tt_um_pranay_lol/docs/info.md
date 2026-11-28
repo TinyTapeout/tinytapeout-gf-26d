@@ -21,7 +21,7 @@ Text comes from one of four sources, selected with `ui[1:0]`:
 
 | MODE | Name  | What is sent                                                                                       |
 | ---- | ----- | -------------------------------------------------------------------------------------------------- |
-| 0    | DEMO  | The built-in message `HELLO FROM SILICON! ` on repeat                                              |
+| 0    | DEMO  | The built-in message `Hey, it's Pranay ` on repeat                                                |
 | 1    | LIVE  | Characters typed on a PC, streamed over UART; each is echoed back once flashed (flow control)       |
 | 2    | LOOP  | Up to 12 characters typed over UART, repeated forever. A newline (`\n`) starts a new message        |
 | 3    | CAL   | `U` (0x55, alternating bits) forever, to help a receiver find the symbol rate                      |
