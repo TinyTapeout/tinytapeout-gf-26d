@@ -1,0 +1,57 @@
+# Tiny Tapeout project information
+project:
+  title:        "Language of Light"      # Project title
+  author:       "Pranay Kanth"      # Your name
+  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "Turns text into flashes of light that a phone camera can read"      # One line description of what your project does
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     10000000       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 340x160 uM.
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 3x4 or 4x4
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_pranay_lol"
+
+  # List your project's source files here.
+  # Source files must be in ./src and you must list each source file separately, one per line.
+  # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
+  source_files:
+    - "project.v"
+    - "uart.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+# This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
+pinout:
+  # Inputs
+  ui[0]: "MODE0"
+  ui[1]: "MODE1"
+  ui[2]: "WIDE"
+  ui[3]: "UART_RX"
+  ui[4]: "SPEED0"
+  ui[5]: "SPEED1"
+  ui[6]: "SPEED2"
+  ui[7]: "INVERT"
+
+  # Outputs
+  uo[0]: "LIGHT"
+  uo[1]: "SYMBOL_CLOCK"
+  uo[2]: "BUSY"
+  uo[3]: "FIRST_CHAR"
+  uo[4]: "UART_TX"
+  uo[5]: "IR_38KHZ"
+  uo[6]: "LIVE_PENDING"
+  uo[7]: "HEARTBEAT"
+
+  # Bidirectional pins
+  uio[0]: "WIDE_D0"
+  uio[1]: "WIDE_D1"
+  uio[2]: "WIDE_D2"
+  uio[3]: "WIDE_D3"
+  uio[4]: "WIDE_D4"
+  uio[5]: "WIDE_D5"
+  uio[6]: "WIDE_D6"
+  uio[7]: "WIDE_D7"
+
+# Do not change!
+yaml_version: 6
