@@ -17,7 +17,7 @@ jobs:
       PDK: gf180mcuD
       PDK_ROOT: ${{ github.workspace }}/.ciel
       PDK_VERSION: 1689ac3f2dc763876eaf967227c7dfe831b031ae
-      TT_CONFIG: gf180mcuD.yaml
+      TT_CONFIG: gf180mcuD.yaml:../../mux_overrides.yaml
 
     # ubuntu
     runs-on: ubuntu-24.04
