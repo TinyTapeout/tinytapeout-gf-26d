@@ -1,0 +1,52 @@
+140. Printing statistics.
+
+=== tt_um_pranay_lol ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+      833        - wires
+      868        - wire bits
+      222        - public wires
+      257        - public wire bits
+        8        - ports
+       43        - port bits
+      849 2.79E+04 cells
+       20  351.232   gf180mcu_fd_sc_mcu7t5v0__and2_1
+        5   109.76   gf180mcu_fd_sc_mcu7t5v0__and3_1
+       13  313.914   gf180mcu_fd_sc_mcu7t5v0__and4_1
+        3   65.856   gf180mcu_fd_sc_mcu7t5v0__aoi211_1
+       38  667.341   gf180mcu_fd_sc_mcu7t5v0__aoi21_1
+        1   24.147   gf180mcu_fd_sc_mcu7t5v0__aoi221_1
+       32  632.218   gf180mcu_fd_sc_mcu7t5v0__aoi22_1
+        6   79.027   gf180mcu_fd_sc_mcu7t5v0__buf_1
+       49  430.259   gf180mcu_fd_sc_mcu7t5v0__clkinv_1
+       96 6.11E+03   gf180mcu_fd_sc_mcu7t5v0__dffq_1
+      104 7.76E+03   gf180mcu_fd_sc_mcu7t5v0__dffrnq_1
+       11  869.299   gf180mcu_fd_sc_mcu7t5v0__dffsnq_1
+      118 3.89E+03   gf180mcu_fd_sc_mcu7t5v0__mux2_2
+        9  632.218   gf180mcu_fd_sc_mcu7t5v0__mux4_1
+       77  845.152   gf180mcu_fd_sc_mcu7t5v0__nand2_1
+       27  414.893   gf180mcu_fd_sc_mcu7t5v0__nand3_1
+       11  217.325   gf180mcu_fd_sc_mcu7t5v0__nand4_1
+       55  724.416   gf180mcu_fd_sc_mcu7t5v0__nor2_1
+       13  228.301   gf180mcu_fd_sc_mcu7t5v0__nor3_1
+        5   109.76   gf180mcu_fd_sc_mcu7t5v0__nor4_1
+        9  197.568   gf180mcu_fd_sc_mcu7t5v0__oai211_1
+       46  807.834   gf180mcu_fd_sc_mcu7t5v0__oai21_1
+        3   79.027   gf180mcu_fd_sc_mcu7t5v0__oai221_1
+       14  307.328   gf180mcu_fd_sc_mcu7t5v0__oai22_1
+        9  217.325   gf180mcu_fd_sc_mcu7t5v0__oai31_1
+        4   105.37   gf180mcu_fd_sc_mcu7t5v0__oai32_1
+        1   32.928   gf180mcu_fd_sc_mcu7t5v0__oai33_1
+        6   105.37   gf180mcu_fd_sc_mcu7t5v0__or2_1
+        3   65.856   gf180mcu_fd_sc_mcu7t5v0__or3_1
+        3   79.027   gf180mcu_fd_sc_mcu7t5v0__or4_1
+        8   70.246   gf180mcu_fd_sc_mcu7t5v0__tieh
+       17  485.139   gf180mcu_fd_sc_mcu7t5v0__xnor2_1
+       31  816.614   gf180mcu_fd_sc_mcu7t5v0__xor2_1
+        2  100.979   gf180mcu_fd_sc_mcu7t5v0__xor3_1
+
+   Chip area for module '\tt_um_pranay_lol': 27944.896000
+     of which used for sequential elements: 14742.963200 (52.76%)
+
