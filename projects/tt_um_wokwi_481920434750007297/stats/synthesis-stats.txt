@@ -1,0 +1,112 @@
+96. Printing statistics.
+
+=== and_cell ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        3        - wires
+        3        - wire bits
+        3        - public wires
+        3        - public wire bits
+        3        - ports
+        3        - port bits
+        1   17.562 cells
+        1   17.562   gf180mcu_fd_sc_mcu7t5v0__and2_1
+
+   Chip area for module '\and_cell': 17.561600
+     of which used for sequential elements: 0.000000 (0.00%)
+
+=== dffr_cell ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        6        - wires
+        6        - wire bits
+        5        - public wires
+        5        - public wire bits
+        5        - ports
+        5        - port bits
+        3   92.198 cells
+        2   17.562   gf180mcu_fd_sc_mcu7t5v0__clkinv_1
+        1   74.637   gf180mcu_fd_sc_mcu7t5v0__dffrnq_1
+
+   Chip area for module '\dffr_cell': 92.198400
+     of which used for sequential elements: 74.636800 (80.95%)
+
+=== not_cell ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        2        - wires
+        2        - wire bits
+        2        - public wires
+        2        - public wire bits
+        2        - ports
+        2        - port bits
+        1    8.781 cells
+        1    8.781   gf180mcu_fd_sc_mcu7t5v0__clkinv_1
+
+   Chip area for module '\not_cell': 8.780800
+     of which used for sequential elements: 0.000000 (0.00%)
+
+=== tt_um_wokwi_481920434750007297 ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+       21        - wires
+       56        - wire bits
+       21        - public wires
+       56        - public wire bits
+        8        - ports
+       43        - port bits
+       24  237.082 cells
+        6   79.027   gf180mcu_fd_sc_mcu7t5v0__buf_1
+       18  158.054   gf180mcu_fd_sc_mcu7t5v0__tiel
+       10        - submodules
+        6        -   and_cell
+        3        -   dffr_cell
+        1        -   not_cell
+
+   Chip area for module '\tt_um_wokwi_481920434750007297': 237.081600
+     of which used for sequential elements: 0.000000 (0.00%)
+
+=== design hierarchy ===
+
+        +----------Count including submodules.
+        |        +-Area including submodules.
+        |        | 
+       40  627.827 tt_um_wokwi_481920434750007297
+        1   17.562 and_cell
+        3   92.198 dffr_cell
+        1    8.781 not_cell
+
+        +----------Count including submodules.
+        |        +-Area including submodules.
+        |        | 
+       59        - wires
+       94        - wire bits
+       56        - public wires
+       91        - public wire bits
+       43        - ports
+       78        - port bits
+        -        - memories
+        -        - memory bits
+        -        - processes
+       40  627.827 cells
+        6   105.37   gf180mcu_fd_sc_mcu7t5v0__and2_1
+        6   79.027   gf180mcu_fd_sc_mcu7t5v0__buf_1
+        7   61.466   gf180mcu_fd_sc_mcu7t5v0__clkinv_1
+        3   223.91   gf180mcu_fd_sc_mcu7t5v0__dffrnq_1
+       18  158.054   gf180mcu_fd_sc_mcu7t5v0__tiel
+       10  390.746 submodules
+        6   105.37   and_cell
+        3  276.595   dffr_cell
+        1    8.781   not_cell
+
+   Chip area for top module '\tt_um_wokwi_481920434750007297': 627.827200
+     of which used for sequential elements: 223.910400 (35.66%)
+
