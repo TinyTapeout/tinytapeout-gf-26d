@@ -1,0 +1,750 @@
+{
+  "version": 1,
+  "author": "Uri Shaked",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-dip-switch-8",
+      "id": "sw1",
+      "left": -94.5,
+      "top": -176.5,
+      "attrs": {},
+      "rotate": 90
+    },
+    {
+      "type": "wokwi-clock-generator",
+      "id": "clock1",
+      "left": -115.2,
+      "top": -355.2,
+      "attrs": {
+        "frequency": "10000"
+      }
+    },
+    {
+      "type": "wokwi-gnd",
+      "id": "pwr2",
+      "left": 1320,
+      "top": -76.8,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-vcc",
+      "id": "pwr1",
+      "left": -115.2,
+      "top": -229.64,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-7segment",
+      "id": "sevseg1",
+      "left": 1300,
+      "top": -183.24,
+      "attrs": {
+        "common": "cathode"
+      }
+    },
+    {
+      "type": "wokwi-slide-switch",
+      "id": "sw2",
+      "left": -35.3,
+      "top": -370,
+      "attrs": {
+        "value": "1"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "left": 19.2,
+      "top": -349,
+      "attrs": {
+        "color": "grey",
+        "label": "Step",
+        "bounce": "0",
+        "key": "s"
+      }
+    },
+    {
+      "type": "wokwi-vcc",
+      "id": "pwr3",
+      "left": 105.6,
+      "top": -373.64,
+      "attrs": {}
+    },
+    {
+      "type": "board-tt-block-input",
+      "id": "ttin",
+      "left": 4.8,
+      "top": -228.13,
+      "attrs": {
+        "verilogRole": "input"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn2",
+      "left": -134.4,
+      "top": -301,
+      "attrs": {
+        "color": "grey",
+        "label": "RESET",
+        "bounce": "0",
+        "key": "r"
+      }
+    },
+    {
+      "type": "wokwi-gnd",
+      "id": "gnd1",
+      "left": -163.8,
+      "top": -259.2,
+      "attrs": {}
+    },
+    {
+      "type": "board-tt-block-output",
+      "id": "ttout",
+      "left": 1100,
+      "top": -208.93,
+      "attrs": {
+        "verilogRole": "output"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "left": -211.2,
+      "top": -293.65,
+      "attrs": {
+        "value": "1000"
+      }
+    },
+    {
+      "type": "wokwi-vcc",
+      "id": "pwr5",
+      "left": -230.4,
+      "top": -325.64,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-xor-2",
+      "id": "px0",
+      "left": 150,
+      "top": -190,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "gg0",
+      "left": 150,
+      "top": -125,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-xor-2",
+      "id": "px1",
+      "left": 370,
+      "top": -190,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "gg1",
+      "left": 370,
+      "top": -125,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-xor-2",
+      "id": "sx1",
+      "left": 435,
+      "top": -190,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "cg1",
+      "left": 435,
+      "top": -125,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-or-2",
+      "id": "co1",
+      "left": 505,
+      "top": -90,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-xor-2",
+      "id": "px2",
+      "left": 590,
+      "top": -190,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "gg2",
+      "left": 590,
+      "top": -125,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-xor-2",
+      "id": "sx2",
+      "left": 655,
+      "top": -190,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "cg2",
+      "left": 655,
+      "top": -125,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-or-2",
+      "id": "co2",
+      "left": 725,
+      "top": -90,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-xor-2",
+      "id": "px3",
+      "left": 810,
+      "top": -190,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "gg3",
+      "left": 810,
+      "top": -125,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-xor-2",
+      "id": "sx3",
+      "left": 875,
+      "top": -190,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "cg3",
+      "left": 875,
+      "top": -125,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-or-2",
+      "id": "co3",
+      "left": 945,
+      "top": -90,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-not",
+      "id": "znot",
+      "left": 150,
+      "top": 150,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "zand",
+      "left": 230,
+      "top": 150,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-text",
+      "id": "a_label",
+      "left": -150,
+      "top": -65,
+      "attrs": {
+        "text": "A: switches 1-4; B: switches 5-8 (low to high bit)"
+      }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "o_label",
+      "left": 1000,
+      "top": -280,
+      "attrs": {
+        "text": "A-E segments: result bits 0-4"
+      }
+    }
+  ],
+  "connections": [
+    [
+      "pwr1:VCC",
+      "sw1:1a",
+      "red",
+      []
+    ],
+    [
+      "sw1:1b",
+      "ttin:EXTIN0",
+      "green",
+      []
+    ],
+    [
+      "pwr1:VCC",
+      "sw1:2a",
+      "red",
+      []
+    ],
+    [
+      "sw1:2b",
+      "ttin:EXTIN1",
+      "green",
+      []
+    ],
+    [
+      "pwr1:VCC",
+      "sw1:3a",
+      "red",
+      []
+    ],
+    [
+      "sw1:3b",
+      "ttin:EXTIN2",
+      "green",
+      []
+    ],
+    [
+      "pwr1:VCC",
+      "sw1:4a",
+      "red",
+      []
+    ],
+    [
+      "sw1:4b",
+      "ttin:EXTIN3",
+      "green",
+      []
+    ],
+    [
+      "pwr1:VCC",
+      "sw1:5a",
+      "red",
+      []
+    ],
+    [
+      "sw1:5b",
+      "ttin:EXTIN4",
+      "green",
+      []
+    ],
+    [
+      "pwr1:VCC",
+      "sw1:6a",
+      "red",
+      []
+    ],
+    [
+      "sw1:6b",
+      "ttin:EXTIN5",
+      "green",
+      []
+    ],
+    [
+      "pwr1:VCC",
+      "sw1:7a",
+      "red",
+      []
+    ],
+    [
+      "sw1:7b",
+      "ttin:EXTIN6",
+      "green",
+      []
+    ],
+    [
+      "pwr1:VCC",
+      "sw1:8a",
+      "red",
+      []
+    ],
+    [
+      "sw1:8b",
+      "ttin:EXTIN7",
+      "green",
+      []
+    ],
+    [
+      "ttout:EXTOUT0",
+      "sevseg1:A",
+      "green",
+      []
+    ],
+    [
+      "ttout:EXTOUT1",
+      "sevseg1:B",
+      "green",
+      []
+    ],
+    [
+      "ttout:EXTOUT2",
+      "sevseg1:C",
+      "green",
+      []
+    ],
+    [
+      "ttout:EXTOUT3",
+      "sevseg1:D",
+      "green",
+      []
+    ],
+    [
+      "ttout:EXTOUT4",
+      "sevseg1:E",
+      "green",
+      []
+    ],
+    [
+      "ttout:EXTOUT5",
+      "sevseg1:F",
+      "green",
+      []
+    ],
+    [
+      "ttout:EXTOUT6",
+      "sevseg1:G",
+      "green",
+      []
+    ],
+    [
+      "ttout:EXTOUT7",
+      "sevseg1:DP",
+      "green",
+      []
+    ],
+    [
+      "pwr2:GND",
+      "sevseg1:COM.1",
+      "black",
+      []
+    ],
+    [
+      "sw2:1",
+      "clock1:CLK",
+      "blue",
+      []
+    ],
+    [
+      "sw2:2",
+      "ttin:EXTCLK",
+      "blue",
+      []
+    ],
+    [
+      "btn1:1.l",
+      "sw2:3",
+      "blue",
+      []
+    ],
+    [
+      "pwr3:VCC",
+      "btn1:2.r",
+      "red",
+      []
+    ],
+    [
+      "btn2:2.l",
+      "gnd1:GND",
+      "black",
+      []
+    ],
+    [
+      "ttin:EXTRST_N",
+      "btn2:1.r",
+      "orange",
+      []
+    ],
+    [
+      "btn2:1.l",
+      "r2:2",
+      "green",
+      []
+    ],
+    [
+      "pwr5:VCC",
+      "r2:1",
+      "red",
+      []
+    ],
+    [
+      "ttin:IN0",
+      "px0:A",
+      "green",
+      []
+    ],
+    [
+      "ttin:IN4",
+      "px0:B",
+      "green",
+      []
+    ],
+    [
+      "ttin:IN0",
+      "gg0:A",
+      "green",
+      []
+    ],
+    [
+      "ttin:IN4",
+      "gg0:B",
+      "green",
+      []
+    ],
+    [
+      "px0:OUT",
+      "ttout:OUT0",
+      "green",
+      []
+    ],
+    [
+      "ttin:IN1",
+      "px1:A",
+      "green",
+      []
+    ],
+    [
+      "ttin:IN5",
+      "px1:B",
+      "green",
+      []
+    ],
+    [
+      "ttin:IN1",
+      "gg1:A",
+      "green",
+      []
+    ],
+    [
+      "ttin:IN5",
+      "gg1:B",
+      "green",
+      []
+    ],
+    [
+      "px1:OUT",
+      "sx1:A",
+      "green",
+      []
+    ],
+    [
+      "gg0:OUT",
+      "sx1:B",
+      "green",
+      []
+    ],
+    [
+      "px1:OUT",
+      "cg1:A",
+      "green",
+      []
+    ],
+    [
+      "gg0:OUT",
+      "cg1:B",
+      "green",
+      []
+    ],
+    [
+      "gg1:OUT",
+      "co1:A",
+      "green",
+      []
+    ],
+    [
+      "cg1:OUT",
+      "co1:B",
+      "green",
+      []
+    ],
+    [
+      "sx1:OUT",
+      "ttout:OUT1",
+      "green",
+      []
+    ],
+    [
+      "ttin:IN2",
+      "px2:A",
+      "green",
+      []
+    ],
+    [
+      "ttin:IN6",
+      "px2:B",
+      "green",
+      []
+    ],
+    [
+      "ttin:IN2",
+      "gg2:A",
+      "green",
+      []
+    ],
+    [
+      "ttin:IN6",
+      "gg2:B",
+      "green",
+      []
+    ],
+    [
+      "px2:OUT",
+      "sx2:A",
+      "green",
+      []
+    ],
+    [
+      "co1:OUT",
+      "sx2:B",
+      "green",
+      []
+    ],
+    [
+      "px2:OUT",
+      "cg2:A",
+      "green",
+      []
+    ],
+    [
+      "co1:OUT",
+      "cg2:B",
+      "green",
+      []
+    ],
+    [
+      "gg2:OUT",
+      "co2:A",
+      "green",
+      []
+    ],
+    [
+      "cg2:OUT",
+      "co2:B",
+      "green",
+      []
+    ],
+    [
+      "sx2:OUT",
+      "ttout:OUT2",
+      "green",
+      []
+    ],
+    [
+      "ttin:IN3",
+      "px3:A",
+      "green",
+      []
+    ],
+    [
+      "ttin:IN7",
+      "px3:B",
+      "green",
+      []
+    ],
+    [
+      "ttin:IN3",
+      "gg3:A",
+      "green",
+      []
+    ],
+    [
+      "ttin:IN7",
+      "gg3:B",
+      "green",
+      []
+    ],
+    [
+      "px3:OUT",
+      "sx3:A",
+      "green",
+      []
+    ],
+    [
+      "co2:OUT",
+      "sx3:B",
+      "green",
+      []
+    ],
+    [
+      "px3:OUT",
+      "cg3:A",
+      "green",
+      []
+    ],
+    [
+      "co2:OUT",
+      "cg3:B",
+      "green",
+      []
+    ],
+    [
+      "gg3:OUT",
+      "co3:A",
+      "green",
+      []
+    ],
+    [
+      "cg3:OUT",
+      "co3:B",
+      "green",
+      []
+    ],
+    [
+      "sx3:OUT",
+      "ttout:OUT3",
+      "green",
+      []
+    ],
+    [
+      "co3:OUT",
+      "ttout:OUT4",
+      "green",
+      []
+    ],
+    [
+      "ttin:IN0",
+      "znot:IN",
+      "green",
+      []
+    ],
+    [
+      "ttin:IN0",
+      "zand:A",
+      "green",
+      []
+    ],
+    [
+      "znot:OUT",
+      "zand:B",
+      "green",
+      []
+    ],
+    [
+      "zand:OUT",
+      "ttout:OUT5",
+      "green",
+      []
+    ],
+    [
+      "zand:OUT",
+      "ttout:OUT6",
+      "green",
+      []
+    ],
+    [
+      "zand:OUT",
+      "ttout:OUT7",
+      "green",
+      []
+    ]
+  ],
+  "dependencies": {}
+}
